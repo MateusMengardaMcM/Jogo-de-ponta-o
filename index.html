@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de pontuação</title>
+</head>
+<body>
+    <h1>Pontuação do Jogo</h1>
+    <p id="message">Você ainda não jogou</p>
+    <button onclick="pointsVerify()">JOGAR</button>
+    <p id="pontos"></p>
+    <script>
+        function pointsVerify() {
+            let points = Math.floor(Math.random()*20);
+            if (points >=10) {
+                document.getElementById("message").innerText = "Você ganhou!";
+            }
+            else {
+                document.getElementById("message").innerText = "Você perdeu!";
+            }
+        console.log(points);
+        document.getElementById("pontos").innerText = points;
+        }
+    </script>
+</body>
+</html>
